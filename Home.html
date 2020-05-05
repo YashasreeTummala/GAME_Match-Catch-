@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MATCH & CATCH</title>
+	<style>
+		/*body{
+			background: rgb(49, 224, 215);
+			background-image: url();
+			background-image : url("/assets/screen-0.jpg");
+			background-repeat : no-repeat;
+			background-position : center;
+			background-color : Ivory; 
+		}*/
+* {
+	padding: 0%;
+	margin: 0%;
+	background-image: url('/assets/BG.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  	background-size: 100% 100%;
+
+}
+
+#Desc {
+	color: white;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+		
+		.button{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color : rgb(243, 0, 0);
+			border-style : solid;
+			color : rgb(214, 11, 51);
+			font-size : 35px;
+			font-weight : bold;
+			padding : 1px;
+			/*width : 50px;*/
+			position: fixed;
+			top : 350px;
+			left : 550px;
+		}
+		</style>
+</head>
+<body>
+	<embed src="music.mp3" loop="true" autostart="true" width="2" height="0">
+	<div id="Desc">
+		<p><h3>Hi Guys, This Game aims to spread the awareness about different contagious diseases that
+			caused micro epidemic in our Country. <br>
+			<B>***INSTRUCTIONS TO PLAY ***</B> <br>
+			<ol >
+				<li>The player will be given a question and two drop boxes.</li>
+				<li>Match the disease with the respective pathogens/ symptoms/.. </li>
+				<li>If everything is correct you will be eligible for next level.</li>
+			</ol>
+			Click the below Button to start the GAME.
+		</h3></p>
+	</div>
+	<div class="container">
+		
+		<button class="button" onclick="makesound()"> <img src="/assets/Logo.jpg" width="200" height="300"> </button>
+		<script>
+			function makesound(){
+				var sound = new Audio('/assets/censoredbeep.mp3')
+				sound.play();
+				sound.onended = function(){
+				location.href='Level1.html';
+			}
+		}
+		</script>
+	</div>
+</body>
+</html>

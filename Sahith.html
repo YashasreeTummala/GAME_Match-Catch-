@@ -1,0 +1,68 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#covidrag1 {
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+function drag(ev)
+{
+ ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev)
+{
+  ev.preventDefault();
+  var data = [];
+  data.push(ev.dataTransfer.getData("text"));
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<div id="covidrag1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="dos1" src="/assets/Cockroach.png" draggable="true" ondragstart="drag(event)" height="200" width="200">
+<br>
+<img id="dos2" src="/assets/Mosquito.png" draggable = "true" ondragstart="drag(event)" width="200" height="200">
+<br>
+<img id="dos3" src="/assets/Cockroach.png" draggable="true" ondragstart="drag(event)" height="200" width="200">
+<br>
+<img id="dos4" src="/assets/Mosquito.png" draggable = "true" ondragstart="drag(event)" width="200" height="200">
+</body>
+</html>
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATCH & CATCH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul>
+    <li> <img src="/assets/D3F5A2147.JPG" id="dragElement" alt=""> </li>
+    <li> <img src="/assets/DSC_0100.JPG" id="dragElement" alt=""> </li>
+    <li> <img src="/assets/DSC_0433.JPG" id="dragElement" alt=""> </li>
+    <li> <img src="/assets/DSC_0597.JPG" id="dragElement" alt=""> </li>
+    <li> <img src="/assets/DSC_0098.JPG" id="dragElement" alt=""> </li>
+  </ul>
+  <div id="dropLocation">
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+-->
