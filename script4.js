@@ -87,7 +87,7 @@ dropLoc7.ondragover = function(evt) {
     dropLoc7.appendChild(myElement); //Place image in Drop Location
     count = count + 10;
     score.innerHTML = count;
-    popup();
+    setInterval(function(){ popup(); }, 1500);
 
     }
   }
@@ -115,7 +115,7 @@ dropLoc7.ondragover = function(evt) {
       dropLoc8.appendChild(myElement); //Place image in Drop Location
       count = count + 10;
       score.innerHTML = count;
-      popup();
+      setInterval(function(){ popup(); }, 1500);
     }
   }
 

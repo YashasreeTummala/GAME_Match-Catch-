@@ -38,7 +38,7 @@ dropLoc1.ondrop = function(evt1) {
   dropLoc1.appendChild(myElement); //Place image in Drop Location
   count = count + 10;
   score.innerHTML = count;
-  popup();
+  setInterval(function(){ popup(); }, 1500);
 }
 //------------------- COCKROACH
 
@@ -70,7 +70,7 @@ dropLoc2.ondragover = function(evt2) {
     dropLoc2.appendChild(myElement); //Place image in Drop Location
     count = count + 10;
     score.innerHTML = count;
-    popup();
+    setInterval(function(){ popup(); }, 1500);
   }
 
 
