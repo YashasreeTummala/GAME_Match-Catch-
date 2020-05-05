@@ -65,7 +65,7 @@ dropLoc5.ondragover = function(evt) {
     dropLoc5.appendChild(myElement); //Place image in Drop Location
     count = count + 10;
     score.innerHTML = count;
-    popup();
+    setInterval(function(){ popup(); }, 1500);
     }
   }
   
@@ -92,7 +92,7 @@ dropLoc5.ondragover = function(evt) {
       dropLoc6.appendChild(myElement); //Place image in Drop Location
       count = count + 10;
       score.innerHTML = count;
-      popup();
+      setInterval(function(){ popup(); }, 1500);
 		}
   }
 
