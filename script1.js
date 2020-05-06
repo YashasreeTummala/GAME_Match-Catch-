@@ -39,7 +39,6 @@ dropLoc1.ondrop = function(evt1) {
   count = count + 10;
   score.innerHTML = count;
   setInterval(function(){ popup(); }, 1500);
-  
 }
 //------------------- COCKROACH
 
@@ -71,8 +70,7 @@ dropLoc2.ondragover = function(evt2) {
     dropLoc2.appendChild(myElement); //Place image in Drop Location
     count = count + 10;
     score.innerHTML = count;
-    
-    setInterval(function(){ popup(); }, 1500); 
+    setInterval(function(){ popup(); }, 1500);
   }
 
 
@@ -80,10 +78,7 @@ dropLoc2.ondragover = function(evt2) {
     var modal = document.getElementById("myModal");
     var bt = document.getElementById("redirect1");
     var span = document.getElementsByClassName("close")[0];
-   
-
-
-   if(count==20){
+    if(count==20){
       modal.style.display = "block";
       
       span.onclick = function() {

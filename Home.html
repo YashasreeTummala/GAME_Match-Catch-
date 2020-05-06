@@ -8,7 +8,7 @@
 		/*body{
 			background: rgb(49, 224, 215);
 			background-image: url();
-			background-image : url("/home/sahith/Desktop/Match-Catch/assets/screen-0.jpg");
+			background-image : url("/assets/screen-0.jpg");
 			background-repeat : no-repeat;
 			background-position : center;
 			background-color : Ivory; 
@@ -16,7 +16,7 @@
 * {
 	padding: 0%;
 	margin: 0%;
-	background-image: url('/home/sahith/Desktop/Match-Catch/assets/BG.jpg');
+	background-image: url('/assets/BG.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
   	background-size: 100% 100%;
@@ -24,7 +24,7 @@
 }
 
 #Desc {
-	color: white;
+	color: rgb(51,0,204);
     height: 450px;
     display: flex;
     justify-content: center;
@@ -49,7 +49,7 @@
 		</style>
 </head>
 <body>
-	<embed src="music.mp3" loop="true" autostart="true" width="2" height="0">
+	<embed src="/assets/AShamaluevMusic.mp3" loop="true" autostart="true" width="2" height="0">
 	<div id="Desc">
 		<p><h3>Hi Guys, This Game aims to spread the awareness about different contagious diseases that
 			caused micro epidemic in our Country. <br>
@@ -64,10 +64,10 @@
 	</div>
 	<div class="container">
 		
-		<button class="button" onclick="makesound()"> <img src="/home/sahith/Desktop/Match-Catch/assets/Logo.jpg" width="200" height="300"> </button>
+		<button class="button" onclick="makesound()"> <img src="Logo.jpg" width="200" height="300"> </button>
 		<script>
 			function makesound(){
-				var sound = new Audio('/home/sahith/Desktop/Match-Catch/assets/censoredbeep.mp3')
+				var sound = new Audio('/assets/censoredbeep.mp3')
 				sound.play();
 				sound.onended = function(){
 				location.href='Level1.html';
