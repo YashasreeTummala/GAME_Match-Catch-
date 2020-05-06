@@ -7,7 +7,7 @@ var dragItem15 = document.getElementById("dragElement15");
 var dragItem16 = document.getElementById("dragElement16");
 var dropLoc5 = document.getElementById("dropLocation5"); 
 var dropLoc6 = document.getElementById("dropLocation6");
-
+var popcount = 0;
 var count = 0;
 
 dragItem11.ondragstart = function(evt) {
@@ -62,11 +62,26 @@ dropLoc5.ondragover = function(evt) {
 		console.log(myElement);
 		var myNewElement = document.createElement('img');
 		//myNewElement.src = myElement.src;  //to add dragged image in div
-    dropLoc5.appendChild(myElement); //Place image in Drop Location
-    count = count + 10;
-    score.innerHTML = count;
-    popup();
+		dropLoc5.appendChild(myElement); //Place image in Drop Location
+    
+		makesound();
+		function makesound(){
+        var sound = new Audio('/assets/DragSound.mp3');
+        sound.play();
+		}
+		popcount = popcount + 1;
+		count = count + 10;
+		score.innerHTML = count;
+		setInterval(function(){ popup(); }, 1500);
     }
+	if(dropItem=="dragElement12"||dropItem=="dragElement15"){
+		count = count - 5;//wrong answer
+		wrongdrag();
+		function wrongdrag(){
+        var sound = new Audio('/assets/wronganswer.mp3');
+        sound.play();
+		}
+	}
   }
   
   dropLoc6.ondragover = function(evt) {
@@ -89,25 +104,42 @@ dropLoc5.ondragover = function(evt) {
 			console.log(myElement);
 			var myNewElement = document.createElement('img');
 			//myNewElement.src = myElement.src;  //to add dragged image in div
-      dropLoc6.appendChild(myElement); //Place image in Drop Location
-      count = count + 10;
-      score.innerHTML = count;
-      popup();
+			dropLoc6.appendChild(myElement); //Place image in Drop Location
+
+			makesound();
+			function makesound(){
+			var sound = new Audio('/assets/DragSound.mp3');
+			sound.play();
+			}
+			popcount = popcount + 1;
+			count = count + 10;
+			score.innerHTML = count;
+			setInterval(function(){ popup(); }, 1500);
 		}
+	if(dropItem=="dragElement11"||dropItem=="dragElement13"||dropItem=="dragElement14"||dropItem=="dragElement16" ){
+		count = count -5;//wrong answer
+		wrongdrag();
+		function wrongdrag(){
+        var sound = new Audio('/assets/wronganswer.mp3');
+        sound.play();
+		}
+	}		
   }
 
   function popup(){
-    var modal = document.getElementById("myModal");
-    var bt = document.getElementById("redirect2");
-    var span = document.getElementsByClassName("close")[0];
-    if(count==60){
-      modal.style.display = "block";
+    if(popcount == 6 )
+	{
+	if(count>50){
+		var modal = document.getElementById("myModal");
+		var bt = document.getElementById("redirect2");
+		var span = document.getElementsByClassName("close")[0];
+		modal.style.display = "block";
       
-      span.onclick = function() {
+		span.onclick = function() {
         modal.style.display = "none";
         }
   
-  // When the user clicks anywhere outside of the modal, close it
+		// When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
@@ -116,5 +148,27 @@ dropLoc5.ondragover = function(evt) {
           bt.onclick = function(){
             location.href='Level3.html';
           }
-    }
+    }else{
+		var modal = document.getElementById("myModal2");
+		var bt = document.getElementById("redirect3");
+		var span = document.getElementsByClassName("closeagain")[0];
+		modal.style.display = "block";
+      
+		span.onclick = function() {
+        modal.style.display = "none";
+        }
+  
+		// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                  }
+          }
+          bt.onclick = function(){
+            location.href='Level2.html';
+          }
+		
+	}
+		
+	}
   }

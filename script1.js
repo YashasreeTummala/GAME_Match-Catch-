@@ -36,9 +36,16 @@ dropLoc1.ondrop = function(evt1) {
   var myNewElement = document.createElement('img');
   //myNewElement.src = myElement.src;  //to add dragged image in div
   dropLoc1.appendChild(myElement); //Place image in Drop Location
+
+  makesound();
+  function makesound(){
+    var sound = new Audio('/assets/DragSound.mp3');
+    sound.play();
+  }
+
   count = count + 10;
   score.innerHTML = count;
-  popup();
+  setInterval(function(){ popup(); }, 1500);
 }
 //------------------- COCKROACH
 
@@ -68,9 +75,16 @@ dropLoc2.ondragover = function(evt2) {
     var myNewElement = document.createElement('img');
     //myNewElement.src = myElement.src; dropLoc2.appendChild(myElement);  //to add dragged image in div by creating a new element
     dropLoc2.appendChild(myElement); //Place image in Drop Location
+
+    makesound();
+    function makesound(){
+      var sound = new Audio('/assets/DragSound.mp3');
+      sound.play();
+    }
+
     count = count + 10;
     score.innerHTML = count;
-    popup();
+    setInterval(function(){ popup(); }, 1500);
   }
 
 
