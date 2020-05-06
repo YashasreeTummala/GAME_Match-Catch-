@@ -1,4 +1,10 @@
-	.modal {
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+#font {
+  font-family: 'Orbitron', sans-serif;
+}
+
+  .modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
@@ -80,23 +86,77 @@
     display: flex;
     /*justify-content: flex-start;
     align-items: flex-start;*/
-    flex-wrap: row wrap;
+	flex-wrap: row wrap;
     width: 100%;
     height: auto;
     padding: 2.5em;
   }
 
+  #question{  
+	  position: absolute;
+	  font-size: 40px;
+	  top: 70px;
+	  left: 47%;
+	  white-space: nowrap;
+	  transform: translate(-50%,-50%);
+	  background: #000000 -webkit-gradient(linear,left top,right top,from(#000000),to(#000000),color-stop(0.1,#fff)) 0 0  no-repeat;
+	  -webkit-background-size: 150px;
+	  -webkit-background-clip: text;
+	  color: rgba(255,255,255,0.1);
+	  animation: animate 5s infinite;
+  }
+  @keyframes animate{
+	 0%,10%{
+	 background-position: -1000px;
+	 }
+		20%{
+		background-position: top left;
+		}
+			90%{
+			background-position:top right;
+			}
+			100%{
+			background-position:1000px;
+			}
+  }
+  #scorebox{
+	  font-family:'Orbitron';
+	  font-size : 35px;
+	  position:absolute;	
+    
+    display:inline;
+	  right:10px;
+	  border : 2px solid;
+	  padding: 2px;
+	  top:250px;
+	  right: 70px;
+  }
+
   #dropLocation1 , #dropLocation3 , #dropLocation5 , #dropLocation7 {
-    margin-left: 70px;
-    background: rgb(149, 238, 149);
+    position:block;
+	  border-width:5px;
+	  border-color:rgb(149, 238, 149);	
+	margin-left: 150px;
+	margin-top: 0px;
+	/*background: rgb(149, 238, 149);*/
+	background:ivory;
     display: flex;
+	width:25%;
     justify-content: flex-start;
     flex-wrap: wrap;
+	border-radius:5px;
   }
 
   #dropLocation2 , #dropLocation4 , #dropLocation6 , #dropLocation8 {
-    margin-left: 100px;
-    background: rgb(243, 96, 96);
+    position:block;
+	  width:25%;
+	margin-left: 100px;
+	margin-top: 0px;
+	border-width:5px;
+	border-radius:5px;
+	border-color:rgb(243, 96, 96);
+   /* background: rgb(243, 96, 96);*/
+   background:ivory;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -111,8 +171,15 @@
   }
 
   div > img {
-    width: 32%;
-    height: 40%;
+    width: 35%;
+    height: 42%;
     display: flex;
     justify-content: space-between;
   } 
+
+  body{
+	  max-width: 100%;
+	  overflow-x:hidden;
+     background:rgb(165,165,165);
+  }
+ 

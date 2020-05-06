@@ -74,6 +74,13 @@ dropLoc3.ondragover = function(evt) {
 		var myNewElement = document.createElement('img');
 		//myNewElement.src = myElement.src;  //to add dragged image in div
     dropLoc3.appendChild(myElement); //Place image in Drop Location
+
+    makesound();
+    function makesound(){
+      var sound = new Audio('/assets/DragSound.mp3');
+      sound.play();
+    }
+
     count = count + 10;
     score.innerHTML = count;
     setInterval(function(){ popup(); }, 1500);
@@ -101,6 +108,13 @@ dropLoc3.ondragover = function(evt) {
 			var myNewElement = document.createElement('img');
 			//myNewElement.src = myElement.src;  //to add dragged image in div
       dropLoc4.appendChild(myElement); //Place image in Drop Location
+
+      makesound();
+      function makesound(){
+        var sound = new Audio('/assets/DragSound.mp3');
+        sound.play();
+      }
+
       count = count + 10;
       score.innerHTML = count;
       setInterval(function(){ popup(); }, 1500);
