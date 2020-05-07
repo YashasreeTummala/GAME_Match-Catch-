@@ -212,7 +212,7 @@
   #dropLocation1 , #dropLocation3 , #dropLocation5 , #dropLocation7 , #dropLocation9 {
     position:block;
 	  border-width:5px;
-	  border-color:rgb(149, 238, 149);	
+	  border-color:rgb(7, 150, 7);	
 	margin-left: 150px;
 	margin-top: 0px;
 	/*background: rgb(149, 238, 149);*/
@@ -231,7 +231,7 @@
 	margin-top: 0px;
 	border-width:5px;
 	border-radius:5px;
-	border-color:rgb(243, 96, 96);
+	border-color:rgb(216, 20, 20);
    /* background: rgb(243, 96, 96);*/
    background:ivory;
     display: flex;
