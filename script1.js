@@ -1,4 +1,32 @@
 
+var CountDown_Time = 5;
+var timerId = setInterval(timer,1000);
+function timer() {
+    if (CountDown_Time == -1){
+        clearInterval(timerId);
+        var modal = document.getElementById("myModal2");
+        var bt = document.getElementById("redirect3");
+        var span = document.getElementsByClassName("closeagain")[0];
+        modal.style.display = "block";
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+      
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+                }
+          }
+          bt.onclick = function(){
+            location.href='Level1.html';
+          }
+        }else{
+        document.getElementById('timer').innerHTML = " " + CountDown_Time;
+        CountDown_Time--;
+      
+      }
+} 
 
 //Drag and drop interfaces HTML5 API's => DataTransfer... => Which Item we are dragging and where we are dropping that communication should be built 
 //Drag & Drop Events :: drag, dragstart, dragenter, dragexit, dragleave, dragover, drop (Don't use drop directly instead use dragover)
@@ -8,6 +36,8 @@ var dragItem2 = document.getElementById("dragElement2");
 var dropLoc1 = document.getElementById("dropLocation1"); 
 var dropLoc2 = document.getElementById("dropLocation2");
 var count = 0;
+
+var popcount = 0;
 //-------------MOSQUITO
 dragItem1.ondragstart = function(evt1) {
   //This event fill be fired when user starts dragging the item
@@ -42,10 +72,12 @@ dropLoc1.ondrop = function(evt1) {
     var sound = new Audio('/assets/DragSound.mp3');
     sound.play();
   }
-
+  popcount = popcount + 1;
   count = count + 10;
   score.innerHTML = count;
-  setInterval(function(){ popup(); }, 1500);
+  if(popcount == 2){
+    setTimeout(function(){ popup(); }, 1000);
+}
 }
 //------------------- COCKROACH
 
@@ -81,32 +113,38 @@ dropLoc2.ondragover = function(evt2) {
       var sound = new Audio('/assets/DragSound.mp3');
       sound.play();
     }
-
+    popcount = popcount + 1;
     count = count + 10;
     score.innerHTML = count;
-    setInterval(function(){ popup(); }, 1500);
+    if(popcount == 2){
+      setTimeout(function(){ popup(); }, 1000);
+  }
   }
 
-
   function popup(){
-    var modal = document.getElementById("myModal");
-    var bt = document.getElementById("redirect1");
-    var span = document.getElementsByClassName("close")[0];
-    if(count==20){
-      modal.style.display = "block";
-      
-      span.onclick = function() {
-        modal.style.display = "none";
-        }
-  
-  // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                  }
+    if(popcount == 2){
+      var modal = document.getElementById("myModal");
+      var bt = document.getElementById("redirect1");
+      var span = document.getElementsByClassName("close")[0];
+      clearInterval(timerId);
+      if(count==20){
+        
+        modal.style.display = "block";
+        
+        span.onclick = function() {
+          modal.style.display = "none";
           }
-          bt.onclick = function(){
-            location.href='Level2.html';
-          }
+    
+    // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+                    }
+            }
+            bt.onclick = function(){
+              location.href='Level2.html';
+            }
+      }
     }
+    
   }

@@ -1,4 +1,31 @@
-
+var CountDown_Time = 30;
+var timerId = setInterval(timer,1000);
+function timer() {
+    if (CountDown_Time == -1){
+        clearInterval(timerId);
+        var modal = document.getElementById("myModal2");
+        var bt = document.getElementById("redirect3");
+        var span = document.getElementsByClassName("closeagain")[0];
+        modal.style.display = "block";
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+      
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+                }
+          }
+          bt.onclick = function(){
+            location.href='Level4.html';
+          }
+        }else{
+        document.getElementById('timer').innerHTML = " " + CountDown_Time;
+        CountDown_Time--;
+      
+      }
+} 
 var dragItem17 = document.getElementById("dragElement17");
 var dragItem18 = document.getElementById("dragElement18");
 var dragItem19 = document.getElementById("dragElement19");
@@ -11,9 +38,9 @@ var dragItem25 = document.getElementById("dragElement25");
 var dragItem26 = document.getElementById("dragElement26");
 var dropLoc7 = document.getElementById("dropLocation7"); 
 var dropLoc8 = document.getElementById("dropLocation8");
-
+var popcount = 0;
 var count = 0;
-
+var TimerId;
 dragItem17.ondragstart = function(evt) {
   //This event fill be fired when user starts dragging the item
   evt.dataTransfer.setData('key',evt.target.id); //value will be our id of drag item //evt.dataTransfer.setData('key','dragElement');
@@ -84,19 +111,28 @@ dropLoc7.ondragover = function(evt) {
 		console.log(myElement);
 		var myNewElement = document.createElement('img');
 		//myNewElement.src = myElement.src;  //to add dragged image in div
-    dropLoc7.appendChild(myElement); //Place image in Drop Location
+		dropLoc7.appendChild(myElement); //Place image in Drop Location
 
-    makesound();
-    function makesound(){
-      var sound = new Audio('/assets/DragSound.mp3');
-      sound.play();
+		makesound();
+		function makesound(){
+			var sound = new Audio('/assets/DragSound.mp3');
+			sound.play();
+			}
+		popcount = popcount + 1;
+		count = count + 10;
+		score.innerHTML = count;
+		if(popcount == 10 )
+			  setTimeout(function(){ popup(); }, 1000);
     }
-
-    count = count + 10;
+	if(dropItem=="dragElement18"||dropItem=="dragElement20"||dropItem=="dragElement22"||dropItem=="dragElement24"||dropItem=="dragElement26"){
+    count = count -5;//wrong answer
     score.innerHTML = count;
-    setInterval(function(){ popup(); }, 1500);
-
-    }
+		wrongdrag();
+		function wrongdrag(){
+        var sound = new Audio('/assets//wronganswer.mp3');
+        sound.play();
+		}
+	}
   }
   
   dropLoc8.ondragover = function(evt) {
@@ -119,39 +155,72 @@ dropLoc7.ondragover = function(evt) {
 			console.log(myElement);
 			var myNewElement = document.createElement('img');
 			//myNewElement.src = myElement.src;  //to add dragged image in div
-      dropLoc8.appendChild(myElement); //Place image in Drop Location
+			dropLoc8.appendChild(myElement); //Place image in Drop Location
 
-      makesound();
-      function makesound(){
-        var sound = new Audio('/assets/DragSound.mp3');
-        sound.play();
-      }
-
-      count = count + 10;
-      score.innerHTML = count;
-      setInterval(function(){ popup(); }, 1500);
+			makesound();
+			function makesound(){
+				var sound = new Audio('/assets/DragSound.mp3');
+				sound.play();
+			}
+		popcount = popcount + 1;
+		count = count + 10;
+		score.innerHTML = count;
+		if(popcount == 10 )
+			  setTimeout(function(){ popup(); }, 1000);
     }
+	if(dropItem=="dragElement17"||dropItem=="dragElement19"||dropItem=="dragElement21"||dropItem=="dragElement23"||dropItem=="dragElement25"){
+    count = count -5;//wrong answer
+    score.innerHTML = count;
+		wrongdrag();
+		function wrongdrag(){
+        var sound = new Audio('/assets/wronganswer.mp3');
+        sound.play();
+		}
+	}
   }
 
   function popup(){
-    var modal = document.getElementById("myModal");
-    var bt = document.getElementById("redirect2");
-    var span = document.getElementsByClassName("close")[0];
-    if(count==100){
-      modal.style.display = "block";
-      
-      span.onclick = function() {
+    if(popcount == 10 )
+	{
+	if(count>90){
+		var modal = document.getElementById("myModal");
+		var bt = document.getElementById("redirect2");
+		var span = document.getElementsByClassName("close")[0];
+		modal.style.display = "block";
+    clearInterval(TimerId);
+		span.onclick = function() {
         modal.style.display = "none";
         }
   
-  // When the user clicks anywhere outside of the modal, close it
+		// When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                   }
           }
           bt.onclick = function(){
-            location.href='Exit.html';
+            location.href='Level5.html';
           }
-    }
-  }
+    }else{
+			var modal = document.getElementById("myModal2");
+			var bt = document.getElementById("redirect3");
+			var span = document.getElementsByClassName("closeagain")[0];
+			modal.style.display = "block";
+      clearInterval(TimerId);
+			span.onclick = function() {
+			modal.style.display = "none";
+			}
+  
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                  }
+			}
+			bt.onclick = function(){
+            location.href='Level4.html';
+			}
+		
+		}
+	}
+}

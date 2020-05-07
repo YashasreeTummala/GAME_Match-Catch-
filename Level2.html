@@ -15,11 +15,14 @@
       <h2 id="scorebox">SCORE : <text id="score"> 0 </text> </h2>
   </p>
 
-
+  <p id="font" >
+    <h2 id="timerbox">TIMER : <text id="timer"> 0 </text> Secs</h2>
+</p>
   <section class="head">
     <p id="qus">
       <h1 id="question">What might be the reasons for Cancer ?</h1>
     </p>
+    
   </section>
 
   <section class="dropLocation">
@@ -38,6 +41,8 @@
     <li><img src="/assets/Veg.png" id="dragElement15" alt=""></li>
     <li><img src="/assets/Weed.png" id="dragElement16" alt=""></li>
   </ul>
+
+  
   <div id="myModal" class="modal">
 
   <!-- Modal content -->
@@ -46,9 +51,20 @@
     <p> <br>
       <span>Congrats ,</span> you successfully completed Level 2</p>
 	<button id="redirect2" class="popupbtn" >Click here to enter Level 3</button>
+   </div>
   </div>
+  
+  <div id="myModal2" class="poptryagain">
 
-</div>
+  <!-- Modal content -->
+  <div class="tryagaincontent">
+    <span class="closeagain">&times;</span>
+    <p> <br>
+      <span>Sorry </span> , Try Again </p>
+	<button id="redirect3" class="redirectbt" >Click here to replay</button>
+   </div>
+  </div>
+  
 </body>
 <script type="text/javascript" src="script2.js"></script>
 </html>
