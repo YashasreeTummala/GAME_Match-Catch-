@@ -105,7 +105,7 @@ dropLoc3.ondragover = function(evt) {
 
     makesound();
     function makesound(){
-    var sound = new Audio('/assets/DragSound.mp3');
+    var sound = new Audio('/images/DragSound.mp3');
     sound.play();
   }
 		popcount = popcount + 1;
@@ -119,7 +119,7 @@ dropLoc3.ondragover = function(evt) {
     score.innerHTML = count;
 		wrongdrag();
 		function wrongdrag(){
-        var sound = new Audio('/assets/wronganswer.mp3');
+        var sound = new Audio('/images/wronganswer.mp3');
         sound.play();
 		}
 	}
@@ -149,7 +149,7 @@ dropLoc3.ondragover = function(evt) {
 
 			makesound();
 			function makesound(){
-			var sound = new Audio('/assets/DragSound.mp3');
+			var sound = new Audio('/images/DragSound.mp3');
 			sound.play();
 		}
 		popcount = popcount + 1;
@@ -163,7 +163,7 @@ dropLoc3.ondragover = function(evt) {
     score.innerHTML = count;
 		wrongdrag();
 		function wrongdrag(){
-        var sound = new Audio('/assets/wronganswer.mp3');
+        var sound = new Audio('/images/wronganswer.mp3');
         sound.play();
 		}
 	}
