@@ -97,7 +97,7 @@ dropLoc5.ondragover = function(evt) {
     
 		makesound();
 		function makesound(){
-        var sound = new Audio('/images/DragSound.mp3');
+        var sound = new Audio('DragSound.mp3');
         sound.play();
 		}
 		popcount = popcount + 1;
@@ -111,7 +111,7 @@ dropLoc5.ondragover = function(evt) {
     score.innerHTML = count;
 		wrongdrag();
 		function wrongdrag(){
-        var sound = new Audio('/images/wronganswer.mp3');
+        var sound = new Audio('wronganswer.mp3');
         sound.play();
 		}
 	}
@@ -141,7 +141,7 @@ dropLoc5.ondragover = function(evt) {
 
 			makesound();
 			function makesound(){
-			var sound = new Audio('/images/DragSound.mp3');
+			var sound = new Audio('DragSound.mp3');
 			sound.play();
 			}
 			popcount = popcount + 1;
@@ -155,7 +155,7 @@ dropLoc5.ondragover = function(evt) {
     score.innerHTML = count;
 		wrongdrag();
 		function wrongdrag(){
-        var sound = new Audio('/images/wronganswer.mp3');
+        var sound = new Audio('wronganswer.mp3');
         sound.play();
 		}
 	}		

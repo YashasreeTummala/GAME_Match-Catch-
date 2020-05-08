@@ -69,7 +69,7 @@ dropLoc2.ondrop = function(evt1) {
 
   makesound();
   function makesound(){
-    var sound = new Audio('/images/DragSound.mp3');
+    var sound = new Audio('DragSound.mp3');
     sound.play();
   }
   popcount = popcount + 1;
@@ -110,7 +110,7 @@ dropLoc1.ondragover = function(evt2) {
 
     makesound();
     function makesound(){
-      var sound = new Audio('/images/DragSound.mp3');
+      var sound = new Audio('DragSound.mp3');
       sound.play();
     }
     popcount = popcount + 1;

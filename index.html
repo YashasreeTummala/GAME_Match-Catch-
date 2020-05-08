@@ -8,7 +8,7 @@
 		/*body{
 			background: rgb(49, 224, 215);
 			background-image: url();
-			background-image : url("/images/screen-0.jpg");
+			background-image : url("screen-0.jpg");
 			background-repeat : no-repeat;
 			background-position : center;
 			background-color : Ivory; 
@@ -18,7 +18,7 @@
 * {
 	padding: 0%;
 	margin: 2px;
-	background-image: url('/images/BG.jpg');
+	background-image: url('BG.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
   	background-size: 100% 100%;
@@ -53,7 +53,7 @@
 </style>
 </head>
 <body>
-	<embed src="/images/AShamaluevMusic.mp3" loop="true" autostart="true" width="2" height="0">
+	<embed src="AShamaluevMusic.mp3" loop="true" autostart="true" width="2" height="0">
 
 	<div id="Desc">
 		<p><h3>Hi Guys, This Game aims to spread the awareness about different contagious diseases that
@@ -70,11 +70,11 @@
 	</div>
 
 	<div class="container">
-		<!-- <button class="button" onclick="makesound()"> <img src="/images/Logo.jpg" width="150" height="240"> </button> -->
-		<button class="button" onclick="makesound()"> <img src="/images/PlayButton.png" width="200" height="200"> </button>
+		<!-- <button class="button" onclick="makesound()"> <img src="Logo.jpg" width="150" height="240"> </button> -->
+		<button class="button" onclick="makesound()"> <img src="PlayButton.png" width="200" height="200"> </button>
 		<script>
 			function makesound(){
-				var sound = new Audio('/images/PlaySound.mp3');
+				var sound = new Audio('PlaySound.mp3');
 				sound.play();
 				sound.onended = function(){
 				location.href='Level1.html';
