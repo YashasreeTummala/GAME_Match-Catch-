@@ -46,13 +46,13 @@ dragItem1.ondragstart = function(evt1) {
   console.log("It's Dragging");
 }
 
-dropLoc1.ondragover = function(evt1) {
+dropLoc2.ondragover = function(evt1) {
 //This event fill be fired when an element (text/img/..) selection is being dragged over to the valid drop location
 evt1.preventDefault();
 console.log("It's Drag Over");
 }
 
-dropLoc1.ondrop = function(evt1) {
+dropLoc2.ondrop = function(evt1) {
   //This event fill be fired when an element id dropped
   //evt holds ondrop()'s object WE have to prevent not to allow drop in HTML using event.
 
@@ -65,7 +65,7 @@ dropLoc1.ondrop = function(evt1) {
   console.log(myElement);
   var myNewElement = document.createElement('img');
   //myNewElement.src = myElement.src;  //to add dragged image in div
-  dropLoc1.appendChild(myElement); //Place image in Drop Location
+  dropLoc2.appendChild(myElement); //Place image in Drop Location
 
   makesound();
   function makesound(){
@@ -87,13 +87,13 @@ dragItem2.ondragstart = function(evt2) {
   console.log("It's Dragging");
 }
 
-dropLoc2.ondragover = function(evt2) {
+dropLoc1.ondragover = function(evt2) {
   //This event fill be fired when an element (text/img/..) selection is being dragged over to the valid drop location
   evt2.preventDefault();
   console.log("It's Drag Over");
   }
 
-  dropLoc2.ondrop = function(evt2) {
+  dropLoc1.ondrop = function(evt2) {
     //This event fill be fired when an element id dropped
     //evt holds ondrop()'s object WE have to prevent not to allow drop in HTML using event.
 
@@ -106,7 +106,7 @@ dropLoc2.ondragover = function(evt2) {
     console.log(myElement);
     var myNewElement = document.createElement('img');
     //myNewElement.src = myElement.src; dropLoc2.appendChild(myElement);  //to add dragged image in div by creating a new element
-    dropLoc2.appendChild(myElement); //Place image in Drop Location
+    dropLoc1.appendChild(myElement); //Place image in Drop Location
 
     makesound();
     function makesound(){
