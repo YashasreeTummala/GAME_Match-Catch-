@@ -1,8 +1,10 @@
 
-var CountDown_Time = 5;
+var CountDown_Time = 15;
 var timerId = setInterval(timer,1000);
 function timer() {
     if (CountDown_Time == -1){
+      console.log("IN IF PART");
+      console.log(CountDown_Time);
         clearInterval(timerId);
         var modal = document.getElementById("myModal2");
         var bt = document.getElementById("redirect3");
@@ -12,10 +14,10 @@ function timer() {
         modal.style.display = "none";
         }
       
-        // When the user clicks anywhere outside of the modal, close it
+        // When the user clicks anywhere outside of the modal, close it , You are closing it sister
         window.onclick = function(event) {
           if (event.target == modal) {
-              modal.style.display = "none";
+              modal.style.display = "GAME OVER..!!"; // none makes it to disapper, in stead you can say game is over move to next level thats it
                 }
           }
           bt.onclick = function(){
@@ -24,7 +26,8 @@ function timer() {
         }else{
         document.getElementById('timer').innerHTML = " " + CountDown_Time;
         CountDown_Time--;
-      
+        console.log("IN ELSE PART");
+        console.log(CountDown_Time);
       }
 } 
 
@@ -138,7 +141,7 @@ dropLoc1.ondragover = function(evt2) {
     // When the user clicks anywhere outside of the modal, close it
           window.onclick = function(event) {
               if (event.target == modal) {
-                  modal.style.display = "none";
+                  modal.style.display = "GAME OVER..!!";
                     }
             }
             bt.onclick = function(){

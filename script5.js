@@ -1,4 +1,4 @@
-var CountDown_Time = 20;
+var CountDown_Time = 40;
 var timerId = setInterval(timer,1000);
 function timer() {
     if (CountDown_Time == -1){
@@ -14,7 +14,7 @@ function timer() {
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
           if (event.target == modal) {
-              modal.style.display = "none";
+              modal.style.display = "GAME OVER..!!";
                 }
           }
           bt.onclick = function(){
@@ -195,7 +195,7 @@ dropLoc9.ondragover = function(evt) {
 		// When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
-                modal.style.display = "none";
+                modal.style.display = "Done!!";
                   }
           }
           bt.onclick = function(){
@@ -214,7 +214,7 @@ dropLoc9.ondragover = function(evt) {
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
             if (event.target == modal) {
-                modal.style.display = "none";
+                modal.style.display = "GAME OVER..!!";
                   }
 			}
 			bt.onclick = function(){

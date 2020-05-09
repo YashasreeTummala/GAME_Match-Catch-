@@ -1,7 +1,9 @@
-var CountDown_Time = 30;
+var CountDown_Time = 90;
 var timerId = setInterval(timer,1000);
 function timer() {
     if (CountDown_Time == -1){
+      console.log("IN IF PART");
+      console.log(CountDown_Time);
         clearInterval(timerId);
         var modal = document.getElementById("myModal2");
         var bt = document.getElementById("redirect3");
@@ -14,7 +16,7 @@ function timer() {
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
           if (event.target == modal) {
-              modal.style.display = "none";
+              modal.style.display = "GAME OVER..!!";
                 }
           }
           bt.onclick = function(){
@@ -23,7 +25,8 @@ function timer() {
         }else{
         document.getElementById('timer').innerHTML = " " + CountDown_Time;
         CountDown_Time--;
-      
+        console.log("IN ELSE PART");
+        console.log(CountDown_Time);
       }
 } 
 var dragItem17 = document.getElementById("dragElement17");
@@ -195,7 +198,7 @@ dropLoc7.ondragover = function(evt) {
 		// When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
-                modal.style.display = "none";
+                modal.style.display = "Done!!";
                   }
           }
           bt.onclick = function(){
@@ -214,7 +217,7 @@ dropLoc7.ondragover = function(evt) {
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
             if (event.target == modal) {
-                modal.style.display = "none";
+                modal.style.display = "GAME OVER..!!";
                   }
 			}
 			bt.onclick = function(){
