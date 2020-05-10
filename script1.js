@@ -1,5 +1,5 @@
 
-var CountDown_Time = 15;
+var CountDown_Time = 10;
 var timerId = setInterval(timer,1000);
 function timer() {
     if (CountDown_Time == -1){
@@ -8,11 +8,11 @@ function timer() {
         clearInterval(timerId);
         var modal = document.getElementById("myModal2");
         var bt = document.getElementById("redirect3");
-        var span = document.getElementsByClassName("closeagain")[0];
+        //var span = document.getElementsByClassName("closeagain")[0];
         modal.style.display = "block";
-        span.onclick = function() {
-        modal.style.display = "none";
-        }
+        //span.onclick = function() {
+        //modal.style.display = "none";
+        //}
       
         // When the user clicks anywhere outside of the modal, close it , You are closing it sister
         window.onclick = function(event) {
