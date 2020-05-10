@@ -119,15 +119,21 @@
   .head {
     display: flex;
     justify-content: flex-star bt;
-    margin-left: 100px;
+	margin-left: 100px;
+	/*background-color: #AE0E36FF;*/
   }
 
   ul {
 	display: flex;
 	justify-content: center;
 	list-style-type: none;
-    /*float: left;*/
+	/*float: left;*/
+	
   }
+
+.palette {
+	background-color: #184A45FF;
+}
 
   li {
     margin: 5px;
@@ -144,6 +150,7 @@
 
   #question{  
 	  position: absolute;
+	  /*background: rgb(255, 167, 4);*/
 	  font-size: 40px;
 	  top: 70px;
 	  left: 54%;
@@ -173,12 +180,12 @@
 	  font-family:'Orbitron';
 	  font-size : 35px;
 	  position:absolute;	
-    
+    color: white;
     display:inline;
 	  right:10px;
 	  border : 2px solid;
 	  padding: 2px;
-	  top:250px;
+	  top:220px;
 	  right: 70px;
   }
 
@@ -186,11 +193,11 @@
 	font-family:'Orbitron';
 	font-size : 35px;
 	position:absolute;	
-  
+  color: white;
   display:inline;
 	right:10px;
 	
-	top:400px;
+	top:350px;
 	right: 70px;
 }
 
@@ -207,7 +214,7 @@
     align-items: flex-start;*/
 	flex-wrap: row wrap;
 	margin-top: 0%;
-	
+	background-color : #101820FF;
     width: 100%;
     height: auto;
     padding: 0.8em;
@@ -217,7 +224,7 @@
   #dropLocation1 , #dropLocation3 , #dropLocation5 , #dropLocation7 , #dropLocation9 {
     position:block;
 	  border-width:5px;
-	  border-color:rgb(7, 150, 7);		
+	  border-color:rgb(6, 121, 15);		
 	
 	margin-left: 110px;
 	margin-top: 0px;
@@ -265,5 +272,8 @@
   body{
 	  max-width: 100%;
 	  overflow-x:hidden;
-     background:rgb(165,165,165);
+	 /*background:rgb(165,165,165);*/
+	 background-color: rgb(187, 19, 61);
+	 /*background-color: #E95C20FF;*/
+	 
   }
